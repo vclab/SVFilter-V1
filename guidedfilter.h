@@ -15,9 +15,9 @@
 #endif // GUIDEDFILTER_H
 
 #include <iostream>
-#include <cv.h>
-#include <highgui.h>
-#include <opencv2/video/background_segm.hpp>
+#include "cv.h"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/video/background_segm.hpp"
 
 using namespace std;
 using namespace cv;

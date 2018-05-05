@@ -22,13 +22,13 @@
 #include <limits.h>
 #include <cmath>
 #ifndef PARAMS_H
-#include <params.h>
+#include "params.h"
 #endif
 #ifndef _KDTREE_H_
-#include <kdtree.h>
+#include "kdtree.h"
 #endif
 #ifndef GUIDEDFILTER_H
-#include <guidedfilter.h>
+#include "guidedfilter.h"
 #endif
 
 

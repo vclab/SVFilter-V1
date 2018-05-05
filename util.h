@@ -16,15 +16,16 @@
 #endif // UTIL_H
 #include <sys/time.h>
 #ifndef __OPENCV_OLD_CV_H__
-#include <cv.h>
+#include "cv.h"
 #endif
 #ifndef __OPENCV_OLD_HIGHGUI_H__
-#include <highgui.h>
+#include "highgui.h"
 #endif
 
 using namespace cv;
+using namespace std;
 
-struct timeval timer_start();
-unsigned long long timer_stop(timeval t);
-void ymlwrite(Mat m, string s);
-Mat ymlread(string s);
+extern struct timeval timer_start();
+extern unsigned long long timer_stop(timeval t);
+extern void ymlwrite(Mat m, string s);
+extern Mat ymlread(string s);

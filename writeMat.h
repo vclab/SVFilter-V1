@@ -4,7 +4,7 @@
 #endif // WRITEMAT_H
 
 #ifndef __OPENCV_ALL_HPP__
-#include <opencv2/opencv.hpp>
+#include "opencv2/opencv.hpp"
 #endif
 #ifndef	_STDLIB_H
 #include <stdlib.h>

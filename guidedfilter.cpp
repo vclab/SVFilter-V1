@@ -9,7 +9,9 @@
 // Email: firstname.lastname@uoit.ca
 //////////////////////////////////////////////////////////////////////
 
-#include<guidedfilter.h>
+#include"guidedfilter.h"
+
+using namespace cv;
 
 // returns the cummulative sum over x and y for radius r
 Mat cumsum(Mat src,int r)

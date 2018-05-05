@@ -16,7 +16,8 @@
 // Email: firstname.lastname@uoit.ca
 //////////////////////////////////////////////////////////////////////
 
-#include <main.h>
+#include "main.h"
+#include "opencv2/xfeatures2d.hpp"
 
 using namespace std;
 using namespace cv;
@@ -101,20 +102,21 @@ Track** loadMatches(Mat img_1, Mat img_2, int& nt){
     //-- Step 1: Detect the keypoints using SURF Detector
     int minHessian = 200;
 
-    SurfFeatureDetector detector( minHessian );
+    cv::Ptr<Feature2D> detector = xfeatures2d::SURF::create();    
+    //SurfFeatureDetector detector( minHessian );
 
     std::vector<KeyPoint> keypoints_1, keypoints_2;
 
-    detector.detect( img_1, keypoints_1 );
-    detector.detect( img_2, keypoints_2 );
+    detector->detect( img_1, keypoints_1 );
+    detector->detect( img_2, keypoints_2 );
 
     //-- Step 2: Calculate descriptors (feature vectors)
-    SurfDescriptorExtractor extractor;
+    //SurfDescriptorExtractor extractor;
 
     Mat descriptors_1, descriptors_2;
 
-    extractor.compute( img_1, keypoints_1, descriptors_1 );
-    extractor.compute( img_2, keypoints_2, descriptors_2 );
+    detector->compute( img_1, keypoints_1, descriptors_1 );
+    detector->compute( img_2, keypoints_2, descriptors_2 );
 
     //-- Step 3: Matching descriptor vectors using FLANN matcher
     FlannBasedMatcher matcher;

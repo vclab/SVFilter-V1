@@ -23,15 +23,15 @@
 #include <iostream>
 #include <fstream>
 #include <cv.h>
-#include "opencv2/nonfree/features2d.hpp"
-#include <highgui.h>
-#include <math.h>
-#include <SLIC.h>
-#include <unistd.h>
-#include <writeMat.h>
-#include <util.h>
-#include <params.h>
-#include <volanalysis.h>
+#include "opencv2/features2d/features2d.hpp"
+#include "highgui.h"
+#include "math.h"
+#include "SLIC.h"
+#include "unistd.h"
+#include "writeMat.h"
+#include "util.h"
+#include "params.h"
+#include "volanalysis.h"
 
 using namespace cv;
 

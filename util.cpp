@@ -10,7 +10,9 @@
 // Email: firstname.lastname@uoit.ca
 //////////////////////////////////////////////////////////////////////
 
-#include<util.h>
+#include "util.h"
+
+using namespace std;
 
 // writes the given Mat in a yml file s.
 void ymlwrite(Mat m, string s){

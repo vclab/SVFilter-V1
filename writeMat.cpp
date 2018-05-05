@@ -2,7 +2,7 @@
  * I, Philip G. Lee, hereby disclaim any Copyright that I might hold
  * by default.
  */
-#include <writeMat.h>
+#include "writeMat.h"
 
 /*!
  *  \author Philip G. Lee <rocketman768@gmail.com>
